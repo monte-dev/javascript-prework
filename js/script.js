@@ -1,4 +1,4 @@
-let userScore = 0;
+let playerScore = 0;
 let computerScore = 0;
 let playerScoreEl = document.getElementById("player-score");
 let computerScoreEl = document.getElementById("computer-score");
@@ -37,23 +37,23 @@ function playGame(playerInput) {
 
     if (argComputerMove == "kamień" && argPlayerMove == "papier") {
       printMessage("Ty wygrywasz");
-      userScore = ++userScore;
-      console.log("Player Score: " + userScore);
-      playerScoreEl.textContent = "Player Score: " + userScore;
+      playerScore = ++playerScore;
+      console.log("Player Score: " + playerScore);
+      playerScoreEl.textContent = "Player Score: " + playerScore;
     } else if (argComputerMove == "kamień" && argPlayerMove == "kamień") {
       printMessage("Remis");
     } else if (argComputerMove == "papier" && argPlayerMove == "nożyce") {
       printMessage("Ty wygrywasz");
-      userScore = ++userScore;
-      console.log("Player Score: " + userScore);
-      playerScoreEl.textContent = "Player Score: " + userScore;
+      playerScore = ++playerScore;
+      console.log("Player Score: " + playerScore);
+      playerScoreEl.textContent = "Player Score: " + playerScore;
     } else if (argComputerMove == "papier" && argPlayerMove == "papier") {
       printMessage("Remis");
     } else if (argComputerMove == "nożyce" && argPlayerMove == "kamień") {
       printMessage("Ty wygrywasz");
-      userScore = ++userScore;
-      console.log("Player Score: " + userScore);
-      playerScoreEl.textContent = "Player Score: " + userScore;
+      playerScore = ++playerScore;
+      console.log("Player Score: " + playerScore);
+      playerScoreEl.textContent = "Player Score: " + playerScore;
     } else if (argComputerMove == "nożyce" && argPlayerMove == "nożyce") {
       printMessage("Remis");
     } else if (argPlayerMove == "nieznany ruch") {
@@ -72,6 +72,7 @@ function playGame(playerInput) {
 const rockBtn = document.getElementById("play-rock");
 const paperBtn = document.getElementById("play-paper");
 const scissorsBtn = document.getElementById("play-scissors");
+const resetBtn = document.getElementById("resetBtn");
 
 rockBtn.addEventListener("click", function () {
   playGame(1);
@@ -81,4 +82,10 @@ paperBtn.addEventListener("click", function () {
 });
 scissorsBtn.addEventListener("click", function () {
   playGame(3);
+});
+resetBtn.addEventListener("click", () => {
+  computerScoreEl.textContent = "Computer Score: ";
+  computerScore = 0;
+  playerScoreEl.textContent = "Player Score: ";
+  playerScore = 0;
 });
