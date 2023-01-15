@@ -5,24 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Kamień, papier, nożyce</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-
     <div class="container">
+        <h1>Kamień | Papier | Nożyce</h1>
+
         <div id="buttons">
-            <button id="play-rock"><i class="fa-solid fa-hand-back-fist"></i>
+            <button type="button" aria-label="rock" aria-hidden="true" id="play-rock"><i
+                    class="fa-solid fa-hand-back-fist"></i>
             </button>
-            <button id="play-paper"><i class="fa-solid fa-hand"></i>
+            <button type="button" aria-label="paper" aria-hidden="true" id="play-paper"><i class="fa-solid fa-hand"></i>
             </button>
-            <button id="play-scissors"><i class="fa-solid fa-hand-scissors"></i>
+            <button type="button" aria-label="scissors" aria-hidden="true" id="play-scissors"><i
+                    class="fa-solid fa-hand-scissors"></i>
             </button>
         </div>
         <div id="messages"></div>
+        <div id="result">
+            <p id="computer-score">Computer Score: </p>
+            <button type="button" id="resetBtn">Reset</button>
+            <p id="player-score">Player Score: </p>
+        </div>
     </div>
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>

@@ -11,9 +11,9 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #D9D7DD;
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 1rem 3rem;
     width: 350px;
-    min-height: 200px;
+    min-height: 400px;
     color: #5F7367;
     border: 1px solid #B07BAC;
     box-shadow: 3px 3px 3px 3px #5f736743;
@@ -25,13 +25,13 @@ button {
     background-color: #B07BAC;
     color: #D9D7DD;
     font-size: 2rem;
+    transition: transform ease-in 0.1s;
     cursor: pointer;
+    border-radius: 8px;
 }
 button:hover {
     color: #5F7367;
-    transform: scale(0.8);
-    font-size: 1.5rem;
-    transform: perspective(300px);
+    transform: scale(0.85);
 }
 #messages {
     text-align: center;
@@ -39,4 +39,9 @@ button:hover {
 }
 #messages div {
     padding: 5px
+}
+#result {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }

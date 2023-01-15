@@ -1,3 +1,8 @@
+let userScore = 0;
+let computerScore = 0;
+let playerScoreEl = document.getElementById("player-score");
+let computerScoreEl = document.getElementById("computer-score");
+
 function playGame(playerInput) {
   clearMessages();
   function getMoveName(argMoveId) {
@@ -17,8 +22,7 @@ function playGame(playerInput) {
 
   let computerMove = getMoveName(randomNumber);
 
-  printMessage("Mój ruch to " + computerMove);
-
+  printMessage("Mój ruch to: " + computerMove);
 
   console.log("Gracz wpisał: " + playerInput);
 
@@ -33,20 +37,33 @@ function playGame(playerInput) {
 
     if (argComputerMove == "kamień" && argPlayerMove == "papier") {
       printMessage("Ty wygrywasz");
+      userScore = ++userScore;
+      console.log("Player Score: " + userScore);
+      playerScoreEl.textContent = "Player Score: " + userScore;
     } else if (argComputerMove == "kamień" && argPlayerMove == "kamień") {
       printMessage("Remis");
     } else if (argComputerMove == "papier" && argPlayerMove == "nożyce") {
       printMessage("Ty wygrywasz");
+      userScore = ++userScore;
+      console.log("Player Score: " + userScore);
+      playerScoreEl.textContent = "Player Score: " + userScore;
     } else if (argComputerMove == "papier" && argPlayerMove == "papier") {
       printMessage("Remis");
     } else if (argComputerMove == "nożyce" && argPlayerMove == "kamień") {
       printMessage("Ty wygrywasz");
+      userScore = ++userScore;
+      console.log("Player Score: " + userScore);
+      playerScoreEl.textContent = "Player Score: " + userScore;
     } else if (argComputerMove == "nożyce" && argPlayerMove == "nożyce") {
       printMessage("Remis");
     } else if (argPlayerMove == "nieznany ruch") {
       printMessage("nie wybrano numeru 1-3");
     } else {
       printMessage("Tym razem przegrywasz :(");
+      computerScore = ++computerScore;
+      console.log("computer score: " + computerScore);
+      computerScoreEl.textContent = "Computer Score: " + computerScore;
+      console.log(computerScoreEl);
     }
   }
   displayResult(computerMove, playerMove);
