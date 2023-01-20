@@ -21,13 +21,13 @@
 
     console.log("Wylosowana licza to: " + randomNumber);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
     printMessage("Mój ruch to: " + computerMove);
 
     console.log("Gracz wpisał: " + playerInput);
 
-    let playerMove = getMoveName(playerInput);
+    const playerMove = getMoveName(playerInput);
 
     printMessage("Twój ruch to: " + playerMove);
 
